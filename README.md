@@ -1,14 +1,70 @@
-# sql-data-analytics-project
-A comprehensive collection of SQL scripts for data exploration, analytics, and reporting. These scripts cover various analyses such as database exploration, measures and metrics, time-based trends, cumulative analytics, segmentation, and more.
-This repository contains SQL queries designed to help data analysts and BI professionals quickly explore, segment, and analyze data within a relational database. Each script focuses on a specific analytical theme and demonstrates best practices for SQL queries.
+# 📊 SQL Data Analytics Project  
+
+A **comprehensive SQL Exploratory Data Analysis (EDA) project** that demonstrates how to explore, analyze, and derive insights from relational databases.  
+This project is designed for **data analysts, BI professionals, and learners** who want hands-on SQL practice.  
+
+The repository contains structured SQL scripts that cover:  
+- 🔍 Database exploration  
+- 📑 Dimensions & attributes analysis  
+- 📆 Date/time-based exploration  
+- 📈 Measures & metrics calculations  
+- ⚖️ Magnitude comparisons across categories  
+- 🏆 Ranking & performance analysis  
 
 ---
-## 🛡️ License
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+## 🎯 Project Overview  
 
-## 🌟 About Me
+This project is inspired by practical SQL workflows where data exploration leads to **actionable insights**.  
 
-Hi there! I'm **Baraa Khatib Salkini**, also known as **Data With Baraa**. I’m an IT professional and passionate YouTuber on a mission to share knowledge and make working with data enjoyable and engaging!
+It demonstrates three main types of SQL analytics projects:  
+1. 🏗️ **Data Warehousing** – Structuring and organizing raw data.  
+2. 🔎 **Exploratory Data Analysis (EDA)** – Asking questions and uncovering patterns. *(Focus of this repo)*  
+3. 📊 **Advanced Analytics** – Business-driven queries (trends, comparisons, segmentation, reports).  
 
-Let's stay in touch! Feel free to connect with me on the following platforms:
+---
+
+## 🗂️ Dataset & Setup  
+
+To run this project, you can set up the database in **SQL Server** in three ways:  
+1. ⚡ **Executing Scripts** – Run `init_database.sql` to create schema & tables.  
+2. 📂 **Importing CSVs** – Use SQL Server’s *Import Flat File* wizard.  
+3. 💾 **Restoring Backup** – Use the provided `.bak` file to restore the database.  
+
+Tables used:  
+- 👤 `DimCustomer` (customer details, demographics, location)  
+- 📦 `DimProduct` (product details, categories, cost)  
+- 🛒 `FactSales` (sales transactions, quantities, revenue, dates)  
+
+---
+
+## 🧠 Core Concept: Dimensions & Measures  
+
+Understanding the dataset is easier if you separate fields into **Dimensions vs Measures**:  
+- 🧩 **Dimensions** → Descriptive attributes (Country, Category, Product, Dates, Gender).  
+- 🔢 **Measures** → Numeric values that can be aggregated (Sales Amount, Quantity, Cost, Age).  
+
+This classification is the foundation of almost every analytical query.  
+
+---
+
+## 🛣️ Project Roadmap  
+
+The project follows **six structured steps** for analysis:  
+
+1. 🔍 **Database Exploration** → Inspect tables, columns, metadata.  
+2. 🧩 **Dimensions Exploration** → Explore unique values (countries, categories, products).  
+3. 📆 **Date Exploration** → Identify time ranges (first/last orders, customer age).  
+4. 📊 **Measures Exploration** → Aggregate metrics (sales, quantities, averages).  
+5. ⚖️ **Magnitude Analysis** → Compare measures across dimensions (sales by category, revenue by country).  
+6. 🏆 **Ranking Analysis** → Identify top/bottom performers (best products, loyal customers, worst sellers).  
+
+---
+
+## 📝 Example Queries  
+
+Here are some representative queries from the project:  
+
+- 📑 **List all tables in the database**  
+```sql
+SELECT * FROM information_schema.tables;
